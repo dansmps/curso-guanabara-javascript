@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <h1>Sistema de nacionalidade</h1>
+   
+   Sua nacionalidade: <input type="text" name="nacionalidade" id="nacionalidade"> 
+   <button onclick="verificar()">Verificar nacionalidade</button>
+   <div id="res"></div>
+
+<script>
+
+function verificar(){
+     var nação = window.document.querySelector("#nacionalidade").value.toLowerCase();
+     var res = window.document.querySelector("#res"); // Seleciona o div para exibir o resultado
+    
+    res.innerHTML = `Você mora em ${nação}`; // Exibe a nacionalidade inserida
+
+    if(nação == "brasil"){
+        res.innerHTML += " e é brasileiro."; 
+    } else {
+        res.innerHTML += " e é estrangeiro. VÁ EMBORA, não gostamos de imigrantes aqui.";
+    }
+}
+
+</script>
+
+</body>
+</html>
